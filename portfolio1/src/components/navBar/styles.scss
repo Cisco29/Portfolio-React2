@@ -64,9 +64,20 @@
       width: 100%;
       position: absolute;
       top: 80px;
-      left: 1; /* Modifier cette valeur pour afficher le menu correctement */
+      left: -110%; /* Modifier cette valeur pour afficher le menu correctement */
       opacity: 1;
       transition: all 0.5s ease;
+
+      &.active {
+          background: #181818;
+          left: 0px;
+          opacity: 1;
+      }
+      &__item {
+          border-bottom: 1px solid #282828;
+          margin: 0;
+          padding: 20px 0px;
+      }
     }
   
     .nav-icon {

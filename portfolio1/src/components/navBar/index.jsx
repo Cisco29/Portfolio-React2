@@ -45,7 +45,7 @@ const NavBar = () => {
             <FaReact size={30} />
           </Link>
         </div>
-        <ul className="navbar__container__menu">
+        <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
           {
             // Utilisez map pour créer une liste d'éléments li
             data.map((item, key) => (
