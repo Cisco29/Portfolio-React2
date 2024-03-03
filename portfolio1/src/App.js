@@ -7,6 +7,7 @@ import Resume from './containers/resume';
 import Skills from './containers/skills';
 import Portfolio from './containers/portfolio';
 import Contact from './containers/contact';
+import NavBar from './components/navBar';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       {/* importation particles */}
 
       {/* navBar */}
-
+        <NavBar/>
       {/* main page content */}
       <Routes>
         <Route index path="/" element={<Home/>}/>
