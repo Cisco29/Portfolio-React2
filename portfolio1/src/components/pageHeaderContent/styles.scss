@@ -1,13 +1,13 @@
 .wrapper {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 8px;
     border-bottom: 1px dashed var(--yellow-theme-main-color);
 
 
     h2{
-        font-size: 36px;
-        font-weight: 700;
+        font-size: 20px;
+        font-weight: 500;
         letter-spacing: 1.5px;
         line-height: 1rem;
         text-transform: capitalize;
@@ -19,6 +19,8 @@
     span {
         svg{
             color: var(--yellow-theme-main-color);
+            height: 25px;
+            width: 25px;
         }
     }
 }
