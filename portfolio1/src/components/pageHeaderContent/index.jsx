@@ -1,4 +1,6 @@
 import './styles.scss'
+import React from 'react'
+
 
 
 const PageHeaderContent = (props) => {
@@ -13,4 +15,4 @@ const {headerText, icon} = props
     )   
 }
 
-export default PageHeaderContent
+export default PageHeaderContent;
