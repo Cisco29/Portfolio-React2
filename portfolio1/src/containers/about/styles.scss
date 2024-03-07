@@ -24,7 +24,7 @@
                 color: var(--yellow-theme-sub-text-color);
                 font-size: 10px;
                 line-height: 1.65;
-                padding-bottom: 20px;
+                padding-bottom: 8px;
                 border-bottom: 1px dashed var(--yellow-theme-main-color);
             }
             ul > li{
@@ -42,7 +42,96 @@
                     padding-bottom: 1px;
                     color: var(--yellow-theme-sub-text-color);
                 }
+                span.value{
+                    border: none;
+                }
             }
         }
+        &__servicesWrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            
+            &__innerContent{
+                width: 180px;
+                height: 180px;
+                background: radial-gradient(100px, var(--yellow-theme-main-color), transparent 90%);
+                position: relative;
+                border-radius: 50%;
+                border: 0.7px solid var(--yellow-theme-main-color);
+                animation: rotation 10s linear 1s infinite;
+
+                div:nth-child(1){
+                    position: absolute;
+                    top: -10%;
+                    left: 41%;
+                }
+                div:nth-child(2){
+                    position: absolute;
+                    right: -7%;
+                    top: 41.5%;
+                }
+                div:nth-child(3){
+                    position: absolute;
+                    bottom: -9%;
+                    left: 41%;
+                }
+                div:nth-child(4){
+                    position: absolute;
+                    left: -7%;
+                    top: 41%;
+                }
+        }
+    }
     }
 }
+
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about__content{
+        flex-direction: column;
+
+        &__personnalWrapper,
+        &__servicesWrapper{
+            width: 100%;
+        }
+        &__servicesWrapper{
+            margin: 10px 0px;
+            &__innerContent{
+                width: 160px;
+                height: 160px;
+                background: radial-gradient(100px, var(--yellow-theme-main-color), transparent 120%);
+
+                div:nth-child(1){
+                    position: absolute;
+                    top: -11%;
+                    left: 38%;
+                }
+                div:nth-child(2){
+                    position: absolute;
+                    right: -8%;
+                    top: 40%;
+                }
+                div:nth-child(3){
+                    position: absolute;
+                    bottom: -10%;
+                    left: 40%;
+                }
+                div:nth-child(4){
+                    position: absolute;
+                    left: -9%;
+                    top: 40%;
+                }
+            }
+        }
+       
+    }
+     }
+
+    
