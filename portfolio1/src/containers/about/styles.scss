@@ -54,35 +54,84 @@
 
             
             &__innerContent{
-                width: 150px;
-                height: 150px;
-                background: radial-gradient(80px, var(--yellow-theme-main-color), transparent 90%);
+                width: 180px;
+                height: 180px;
+                background: radial-gradient(100px, var(--yellow-theme-main-color), transparent 90%);
                 position: relative;
                 border-radius: 50%;
-                border: 1.5px solid var(--yellow-theme-main-color);
+                border: 0.7px solid var(--yellow-theme-main-color);
+                animation: rotation 10s linear 1s infinite;
 
                 div:nth-child(1){
                     position: absolute;
-                    top: -9%;
+                    top: -10%;
                     left: 41%;
                 }
                 div:nth-child(2){
                     position: absolute;
-                    right: -8%;
+                    right: -7%;
                     top: 41.5%;
                 }
                 div:nth-child(3){
                     position: absolute;
-                    bottom: -10%;
+                    bottom: -9%;
                     left: 41%;
                 }
                 div:nth-child(4){
                     position: absolute;
-                    left: -8%;
+                    left: -7%;
                     top: 41%;
                 }
         }
     }
     }
 }
+
+@keyframes rotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about__content{
+        flex-direction: column;
+
+        &__personnalWrapper,
+        &__servicesWrapper{
+            width: 100%;
+        }
+        &__servicesWrapper{
+            margin: 10px 0px;
+            &__innerContent{
+                width: 160px;
+                height: 160px;
+                background: radial-gradient(100px, var(--yellow-theme-main-color), transparent 120%);
+
+                div:nth-child(1){
+                    position: absolute;
+                    top: -11%;
+                    left: 38%;
+                }
+                div:nth-child(2){
+                    position: absolute;
+                    right: -8%;
+                    top: 40%;
+                }
+                div:nth-child(3){
+                    position: absolute;
+                    bottom: -10%;
+                    left: 40%;
+                }
+                div:nth-child(4){
+                    position: absolute;
+                    left: -9%;
+                    top: 40%;
+                }
+            }
+        }
+       
+    }
+     }
+
     

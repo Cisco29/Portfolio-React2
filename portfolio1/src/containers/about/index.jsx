@@ -73,6 +73,13 @@ const About = () => {
           </Animate>
         </div>
         <div className="about__content__servicesWrapper">
+        <Animate
+            play
+            duration={1.5}
+            delay={1}
+            start={{ transform: "translateX(600px)" }}
+            end={{ transform: "translateX(0px)" }}
+          > 
           <div className="about__content__servicesWrapper__innerContent">
             <div>
               <FaDev size={25} color="var(--yellow-theme-main-color)" />
@@ -87,7 +94,9 @@ const About = () => {
               <DiApple size={25} color="var(--yellow-theme-main-color)" />
             </div>
           </div>
+          </Animate>
         </div>
+
       </div>
     </section>
   );
