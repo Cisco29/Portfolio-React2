@@ -15,7 +15,7 @@
                 color: var(--yellow-theme-main-color);
                 font-weight: 700;
                 font-size: 22px;
-                position: relative;
+
                 line-height: 1rem;
                 letter-spacing: 0.5px;
                 text-transform: uppercase;
@@ -23,6 +23,7 @@
                 border-bottom: 2px solid var(--yellow-theme-main-color);
 
             }
+
             &__category-text::before , &__category-text::after{
                 content: "";
                 position: absolute;
@@ -64,4 +65,5 @@
     .skills__content-wrapper__inner-content__progressbar-container{
         margin-bottom: 20px;
     }
+
 }
