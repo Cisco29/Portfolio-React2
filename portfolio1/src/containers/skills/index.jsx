@@ -33,7 +33,7 @@ const Skills = () => {
                                         <div className="progressbar-wrapper" key={j}>
                                             <p>{skillItem.skillName}</p>
                                             <Line
-                                                percent={skillItem.percentage}
+                                                percent={parseInt(skillItem.level)}
                                                 strokeWidth="2"
                                                 strokeColor="var(--yellow-theme-main-color)"
                                                 trailWidth="2"
