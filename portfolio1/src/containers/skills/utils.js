@@ -45,6 +45,21 @@ export const skillsData = [
             },
             
         ]
+    },
+    {
+        label: "Database",
+        data: [
+            {
+                skillName: "MySQL",
+                level: "60%",
+            },
+            {
+                skillName: "MongoDB",
+                level: "60%",
+            },
+          
+            
+        ]
     }
 ];
 

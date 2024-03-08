@@ -8,11 +8,11 @@ import "./styles.scss";
 
 const Skills = () => {
     return (
-        <section id="skills" className="skill">
+        <section id="skills" className="skills">
             <PageHeaderContent headerText="My Skills" icon={<BsInfoCircleFill size={40} />} />
-            <div className="skill__content-wrapper">
+            <div className="skills__content-wrapper">
                 {skillsData.map((item, i) => (
-                    <div key={i} className="skill__content-wrapper__inner-content">
+                    <div key={i} className="skills__content-wrapper__inner-content">
                         <Animate
                             play
                             duration={1}
@@ -20,24 +20,24 @@ const Skills = () => {
                             start={{ transform: "translateX(-200px)" }}
                             end={{ transform: "translateX(0px)" }}
                         >
-                            <h3 className="skill__content-wrapper__inner-content__vategory-text">{item.label}</h3>
+                            <h3 className="skills__content-wrapper__inner-content__category-text">{item.label}</h3>
                             <div>
-                                {item.data.map((skillItem, j) => (
+                                {item.data.map((skillItem ,j) => (
                                     <AnimateKeyframes
                                         play
                                         duration={1}
                                         keyframes={["opacity: 1", "opacity: 0"]}
-                                        iterations={1}
+                                        iterationCount="1"
                                         key={j}
                                     >
-                                        <div className="progressbar-wrapper">
+                                        <div className="progressbar-wrapper" key={j}>
                                             <p>{skillItem.skillName}</p>
                                             <Line
-                                                percent={parseInt(skillItem.level)}
+                                                percent={skillItem.percentage}
                                                 strokeWidth="2"
                                                 strokeColor="var(--yellow-theme-main-color)"
                                                 trailWidth="2"
-                                                strokeLinecap="square"
+                                                strokeLinecap= "square"
                                             />
                                         </div>
                                     </AnimateKeyframes>
