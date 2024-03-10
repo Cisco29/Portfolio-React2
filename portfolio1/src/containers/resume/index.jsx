@@ -1,8 +1,11 @@
 import React from "react";
 import PageHeaderContent from "../../components/PageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
-import { VerticalTimeLine,  VerticalTimelineElement } from "react-vertical-timeline-component";
+import { VerticalTimeline } from "react-vertical-timeline-component";
 import { data } from "./utils";
+import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import 'react-vertical-timeline-component/style.min.css';
+
 
 const Resume = () => {
     return (
@@ -12,34 +15,32 @@ const Resume = () => {
          <div className="timeline">
           <div className="timeline__experience">
             <h3 className="timeline__experience__header-text">Experience</h3>
-            <VerticalTimeLine
-            layout={'1-column'}
+            <VerticalTimeline
+            layout="1-column"
             lineColor="var(--yellow-theme-main-color)"
             >
               {
                 data.experience.map((item,i)=>(
                   <VerticalTimelineElement
                   key={i}
-                  className="timeline__experience__vertial-timeline-element"
+                  className="timeline__experience__vertical-timeline-element"
                   >
                     <div className="vertical-timeline-element-title-wrapper">
-                      
                       <h3 className="vertical-timeline-element-title">
-                        {item.title}
-                        </h3>
+                      {item.title}
+                      </h3>
+                      <h4 className="vertical-timeline-element-subtitle">
+                      {item.subTitle}
+                      </h4>
+                      <p>{item.description}</p>
 
-                        <h4 className="vertical-timeline-element-subtitle">
-                        {item.subTitle}
-                        </h4>
-                        <p>{item.description}</p>
                     </div>
 
-                  </VerticalTimelineElement>
-                  
+                  </VerticalTimelineElement> 
                 ))
               }
 
-            </VerticalTimeLine>
+            </VerticalTimeline>
 
           </div>
           <div className="timeline__education"></div>
