@@ -42,7 +42,7 @@ const NavBar = () => {
       <nav className="navbar">
         <div className="navbar__container">
           <Link to={"/"} className="navbar__container__menu__logo">
-            <FaReact size={30} />
+            <FaReact size={25} />
           </Link>
         </div>
         <ul className={`navbar__container__menu ${toggleIcon ? "active" : ""}`}>
@@ -62,7 +62,7 @@ const NavBar = () => {
           }
         </ul>
         <div className="nav-icon" onClick={handleToggleIcon}>
-          {toggleIcon ? <HiX size={30} /> : <FaBars size={30} />}
+          {toggleIcon ? <HiX size={25} /> : <FaBars size={25} />}
         </div>
       </nav>
     </div>

@@ -1,6 +1,6 @@
 .navbar {
   background-color: var(--yellow-theme-nav-background-color);
-  height: 80px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,14 +25,14 @@
       text-align: center;
 
       &__item {
-        line-height: 40px;
-        margin-right: 1.5rem;
-        font-size: 1.6rem;
+        line-height: 20px;
+        margin-right: 1rem;
+        font-size: 1.3rem;
 
         &::after {
           content: "";
           display: block;
-          width: 0;
+          width: 100;
           height: 3px;
           background: transparent;
           transition: all 0.5s ease;
@@ -64,7 +64,7 @@
       width: 100%;
       position: absolute;
       top: 80px;
-      left: -110%; /* Modifier cette valeur pour afficher le menu correctement */
+      left: 110%; /* Modifier cette valeur pour afficher le menu correctement */
       opacity: 1;
       transition: all 0.5s ease;
 
