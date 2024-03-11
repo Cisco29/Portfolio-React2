@@ -1,6 +1,6 @@
 .navbar {
   background-color: var(--yellow-theme-nav-background-color);
-  height: 80px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@
       &__item {
         line-height: 20px;
         margin-right: 1rem;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
 
         &::after {
           content: "";
@@ -56,39 +56,39 @@
     display: none;
   }
   
-  // @media only screen and (max-width: 768px) {
-  //   .navbar__container__menu {
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     width: 100%;
-  //     position: absolute;
-  //     top: 80px;
-  //     left: 110%; /* Modifier cette valeur pour afficher le menu correctement */
-  //     opacity: 1;
-  //     transition: all 0.5s ease;
+  @media only screen and (max-width: 768px) {
+    .navbar__container__menu {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 110%; /* Modifier cette valeur pour afficher le menu correctement */
+      opacity: 1;
+      transition: all 0.5s ease;
 
-  //     &.active {
-  //         background: #181818;
-  //         left: 0px;
-  //         opacity: 1;
-  //     }
-  //     &__item {
-  //         border-bottom: 1px solid #282828;
-  //         margin: 0;
-  //         padding: 20px 0px;
-  //     }
-  //   }
+      &.active {
+          background: #181818;
+          left: 0px;
+          opacity: 1;
+      }
+      &__item {
+          border-bottom: 1px solid #282828;
+          margin: 0;
+          padding: 20px 0px;
+      }
+    }
   
-  //   .nav-icon {
-  //     display: block; /* Définissez display: block; à l'intérieur du média-query */
-  //     position: absolute;
-  //     top: 0;
-  //     right: 0;
-  //     transform: translate(-100%, 60%);
-  //     font-size: 1.8rem;
-  //     cursor: pointer;
-  //     color: var(--yellow-theme-main-color);
-  //   }
-  // }
+    .nav-icon {
+      display: block; /* Définissez display: block; à l'intérieur du média-query */
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 60%);
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--yellow-theme-main-color);
+    }
+  }
   

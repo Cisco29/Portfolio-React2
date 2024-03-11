@@ -22,18 +22,18 @@
             }
             p{
                 color: var(--yellow-theme-sub-text-color);
-                font-size: 10px;
+                font-size: 8px;
                 line-height: 1.65;
                 padding-bottom: 8px;
                 border-bottom: 1px dashed var(--yellow-theme-main-color);
             }
             ul > li{
-                line-height: 1rem;
+                line-height: 0.6rem;
                 margin-bottom: 15px;
 
                 span.title, span.value {
-                    font-size: 10px;
-                    font-weight: 700;
+                    font-size: 8px;
+                    font-weight: 500;
                     letter-spacing: 0.5px;
                     border-bottom: 2px solid var(--yellow-theme-main-color);
                     position: relative;
