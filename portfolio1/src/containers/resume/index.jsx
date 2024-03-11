@@ -48,7 +48,8 @@ const Resume = () => {
                       
 
                     </div>
-                    <p>{item.description}</p>
+                    <p className="vertical-timeline-element-title-wrapper-description">{item.description}</p>
+
                   </VerticalTimelineElement> 
                 ))
               }
