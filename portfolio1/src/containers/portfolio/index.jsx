@@ -6,97 +6,125 @@ import ImageTwo from "../../images/plume.png";
 import ImageThree from "../../images/iddeos.png";
 import ImageFour from "../../images/slide.png";
 import ImageFive from "../../images/portfolio.png";
+import ImageSix from "../../images/loginFormTransparent.png";
 import "./styles.scss";
-import  { useState } from "react";
+import { useState } from "react";
 
 const portfolioData = [
   {
     id: 2,
-    name : "Projet Flovia",
-    image : ImageOne,
-
+    name: "Projet Flovia",
+    image: ImageOne,
+    link: "",
   },
   {
     id: 2,
-    name : "Projet Plume",
-    image : ImageTwo,
+    name: "Projet Plume",
+    image: ImageTwo,
+    link: "",
   },
   {
     id: 2,
-    name : "Projet Inventor Manager",
-    image : ImageThree,
+    name: "Projet Inventor Manager",
+    image: ImageThree,
+    link: "",
   },
   {
     id: 3,
-    name : "Slide eyes",
-    image : ImageFour,
+    name: "Slider eyes",
+    image: ImageFour,
+    link: "",
   },
   {
     id: 3,
-    name : "Portfolio",
-    image : ImageFive,
-  }
-]
+    name: "Portfolio",
+    image: ImageFive,
+    link: "",
+  },
+  {
+    id: 3,
+    name: "Login Form transparent",
+    image: ImageSix,
+    link: "",
+  },
+];
 
 const filterData = [
   {
     filterId: 1,
-    label : 'All'
+    label: "All",
   },
   {
     filterId: 2,
-    label : 'PHP & React'
+    label: "PHP & React",
   },
   {
     filterId: 3,
-    label : 'Other'
+    label: "Other",
   },
-]
+];
 
 const Portfolio = () => {
-
-  const [filteredvalue, setFilteredValue] = useState(1)
-  function handleFilter(currentId){
-    setFilteredValue(currentId)
+  const [filteredvalue, setFilteredValue] = useState(1);
+  const [hoveredValue, setHoveredValue] = useState(null);
+  function handleFilter(currentId) {
+    setFilteredValue(currentId);
   }
-  const filteredItems = filteredvalue === 1 ? portfolioData : portfolioData.filter(item => item.id === filteredvalue)
+function handleHover(index){
+  setHoveredValue(index)
+}
 
-    return (
-     
-        <section id="portfolio" className="portfolio">
-        <PageHeaderContent headerText="My Portfolio" icon={<BsInfoCircleFill size={40} />}
-         />
-         <div className="portfolio__content">
-          <ul className="portfolio__content__filter">
-            {
-              filterData.map(item => (
-                <li className={item.filterId === filteredvalue ? "active" : ""} onClick={()=>handleFilter(item.filterId)} key={item.filterId}>
-                  { 
-                    item.label 
-                  }
-                </li>
-              ))
-            }
+  const filteredItems =
+    filteredvalue === 1
+      ? portfolioData
+      : portfolioData.filter((item) => item.id === filteredvalue);
 
-          </ul>
-          <div className="portfolio__content__cards">
-            {
-              filteredItems.map((item) => (
-                <div className="portfolio__content__cards__item" key={`cardItem${item.name.trim()}`}>
-                  <div className="portfolio__content__cards__item__img-wrapper">
-                    <a>
-                      <img  alt="portfolio" src={item.image}  />
-                    </a>
-                  </div>
-
-                </div>
-              ))
-            }
-
-          </div>
-
-         </div>
-      </section>
-    );
+  return (
+    <section id="portfolio" className="portfolio">
+      <PageHeaderContent
+        headerText="My Portfolio"
+        icon={<BsInfoCircleFill size={40} />}
+      />
+      <div className="portfolio__content">
+        <ul className="portfolio__content__filter">
+          {filterData.map((item) => (
+            <li
+              className={item.filterId === filteredvalue ? "active" : ""}
+              onClick={() => handleFilter(item.filterId)}
+              key={item.filterId}
+            >
+              {item.label}
+            </li>
+          ))}
+        </ul>
+        <div className="portfolio__content__cards">
+          {filteredItems.map((item, index) => (
+            <div
+              className="portfolio__content__cards__item"
+              key={`cardItem${item.name.trim()}`}
+              onMouseEnter={()=>handleHover(index)}
+              onMouseLeave={()=>handleHover(null)}
+            >
+              <div className="portfolio__content__cards__item__img-wrapper">
+                <a>
+                  <img alt="portfolio" src={item.image} />
+                </a>
+              </div>
+              <div className="overlay">
+                {
+                  index === hoveredValue && (
+                    <div>
+                      <p>{item.name}</p>
+                      <button>Visit</button>
+                    </div>
+                  )
+                }
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 export default Portfolio;
