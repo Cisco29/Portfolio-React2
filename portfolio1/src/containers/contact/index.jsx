@@ -87,16 +87,18 @@ const Contact = () => {
                     Email
                   </label>
                 </div>
-                <div className="descriptionWrapper"> {/* Nouvelle div pour envelopper les icônes */}
-                  <textarea
-                    required
-                    name="description"
-                    className="inputDescription"
-                    type="text"
-                    rows="5"
-                    value={formData.description}
-                    onChange={handleChange}
-                  />
+                <div>
+                <textarea
+                  required
+                  name="description"
+                  className="inputDescription"
+                  type={"text"}
+                  rows="5"
+                />
+                <label htmlFor="description" className="descriptionLabel">
+                  Description
+                </label>
+                  
                   <div className="socialLinks"> {/* Div pour les icônes */}
                     <a href="https://github.com/Cisco29"><FaGithub className="yellow" size={20} /></a> {/* Lien vers GitHub avec icône */}
                     <a href="https://www.linkedin.com/in/francisco-castro-47a8a1260/"><FaLinkedin className="yellow" size={20} /></a> {/* Lien vers LinkedIn avec icône */}

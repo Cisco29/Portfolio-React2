@@ -70,9 +70,9 @@ const Portfolio = () => {
   function handleFilter(currentId) {
     setFilteredValue(currentId);
   }
-function handleHover(index){
-  setHoveredValue(index)
-}
+  function handleHover(index) {
+    setHoveredValue(index);
+  }
 
   const filteredItems =
     filteredvalue === 1
@@ -102,8 +102,8 @@ function handleHover(index){
             <div
               className="portfolio__content__cards__item"
               key={`cardItem${item.name.trim()}`}
-              onMouseEnter={()=>handleHover(index)}
-              onMouseLeave={()=>handleHover(null)}
+              onMouseEnter={() => handleHover(index)}
+              onMouseLeave={() => handleHover(null)}
             >
               <div className="portfolio__content__cards__item__img-wrapper">
                 <a href={item.link} target="_blank" rel="noopener noreferrer">
@@ -111,15 +111,19 @@ function handleHover(index){
                 </a>
               </div>
               <div className="overlay">
-  {index === hoveredValue && (
-    <div>
-      <p>{item.name}</p>
-      <a href={item.link} target="_blank" rel="noopener noreferrer">
-        <button>Visit</button>
-      </a>
-    </div>
-  )}
-</div>
+                {index === hoveredValue && (
+                  <div>
+                    <p>{item.name}</p>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button>Visit</button>
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
