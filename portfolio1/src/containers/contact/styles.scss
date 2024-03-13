@@ -2,6 +2,7 @@
 
     .yellow{
         color: var(--yellow-theme-main-color);
+      
     }
     &__content{
         padding: 20px;
@@ -9,7 +10,7 @@
         &__header-text{
             color: var(--yellow-theme-sub-text-color);
             display: inline-block;
-            font-size: 9px;
+            font-size: 14px;
             font-weight: 600;
             line-height: 1em;
             letter-spacing: 0.5px;
