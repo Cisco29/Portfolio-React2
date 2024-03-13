@@ -15,19 +15,19 @@ const portfolioData = [
     id: 2,
     name: "Projet Flovia",
     image: ImageOne,
-    link: "",
+    link: "../../../public/assets/video/floviaVideo.mp4",
   },
   {
     id: 2,
     name: "Projet Plume",
     image: ImageTwo,
-    link: "",
+    link: "../../../public/assets/video/plumeVideo.mp4",
   },
   {
     id: 2,
     name: "Projet Inventor Manager",
     image: ImageThree,
-    link: "",
+    link: "../../../public/assets/video/iddeosVideo.mp4",
   },
   {
     id: 3,
