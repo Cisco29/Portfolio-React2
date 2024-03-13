@@ -39,7 +39,7 @@ const portfolioData = [
     id: 3,
     name: "Portfolio",
     image: ImageFive,
-    link: "",
+    link: "https://portfolio-cisco29s-projects.vercel.app/",
   },
   {
     id: 3,
@@ -106,20 +106,20 @@ function handleHover(index){
               onMouseLeave={()=>handleHover(null)}
             >
               <div className="portfolio__content__cards__item__img-wrapper">
-                <a>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <img alt="portfolio" src={item.image} />
                 </a>
               </div>
               <div className="overlay">
-                {
-                  index === hoveredValue && (
-                    <div>
-                      <p>{item.name}</p>
-                      <button>Visit</button>
-                    </div>
-                  )
-                }
-              </div>
+  {index === hoveredValue && (
+    <div>
+      <p>{item.name}</p>
+      <a href={item.link} target="_blank" rel="noopener noreferrer">
+        <button>Visit</button>
+      </a>
+    </div>
+  )}
+</div>
             </div>
           ))}
         </div>
