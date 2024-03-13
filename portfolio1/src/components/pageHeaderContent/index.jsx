@@ -12,7 +12,7 @@ const {headerText, icon} = props
         <h2>{headerText}</h2>
         <span>{icon}</span>
         </div>
-    )   
-}
+    ) ;  
+};
 
 export default PageHeaderContent;
