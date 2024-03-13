@@ -15,19 +15,19 @@ const portfolioData = [
     id: 2,
     name: "Projet Flovia",
     image: ImageOne,
-    link: "",
+    link: "../../../public/assets/video/floviaVideo.mp4",
   },
   {
     id: 2,
     name: "Projet Plume",
     image: ImageTwo,
-    link: "",
+    link: "../../../public/assets/video/plumeVideo.mp4",
   },
   {
     id: 2,
     name: "Projet Inventor Manager",
     image: ImageThree,
-    link: "",
+    link: "../../../public/assets/video/iddeosVideo.mp4",
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const portfolioData = [
     id: 3,
     name: "Portfolio",
     image: ImageFive,
-    link: "",
+    link: "https://portfolio-cisco29s-projects.vercel.app/",
   },
   {
     id: 3,
@@ -70,9 +70,9 @@ const Portfolio = () => {
   function handleFilter(currentId) {
     setFilteredValue(currentId);
   }
-function handleHover(index){
-  setHoveredValue(index)
-}
+  function handleHover(index) {
+    setHoveredValue(index);
+  }
 
   const filteredItems =
     filteredvalue === 1
@@ -102,23 +102,27 @@ function handleHover(index){
             <div
               className="portfolio__content__cards__item"
               key={`cardItem${item.name.trim()}`}
-              onMouseEnter={()=>handleHover(index)}
-              onMouseLeave={()=>handleHover(null)}
+              onMouseEnter={() => handleHover(index)}
+              onMouseLeave={() => handleHover(null)}
             >
               <div className="portfolio__content__cards__item__img-wrapper">
-                <a>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <img alt="portfolio" src={item.image} />
                 </a>
               </div>
               <div className="overlay">
-                {
-                  index === hoveredValue && (
-                    <div>
-                      <p>{item.name}</p>
+                {index === hoveredValue && (
+                  <div>
+                    <p>{item.name}</p>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <button>Visit</button>
-                    </div>
-                  )
-                }
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
           ))}
