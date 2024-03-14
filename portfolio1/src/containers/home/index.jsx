@@ -27,6 +27,7 @@ const Home = () => {
 
         <div className="home__contact-me">
           <button onClick={handleNavigateToContactMePage}>Hire Me</button>
+          <a href="../../../cv.pdf" download><button>Download Resume</button></a>
         </div>
       </Animate>
     </section>
