@@ -4,23 +4,23 @@ export const skillsData = [
         data: [
             {
                 skillName: "HTML",
-                level: "90%",
+                level: "45%",
             },
             {
                 skillName: "CSS",
-                level: "90%",
+                level: "55%",
             },
             {
                 skillName: "JavaScript",
-                level: "80%",
+                level: "47%",
             },
             {
                 skillName: "ReactJS",
-                level: "80%",
+                level: "42%",
             },
             {
                 skillName: "Tailwind CSS",
-                level: "60%",
+                level: "55%",
             },
         ],
     },
@@ -29,19 +29,19 @@ export const skillsData = [
         data: [
             {
                 skillName: "PHP",
-                level: "90%",
+                level: "45%",
             },
             {
                 skillName: "Symfony",
-                level: "90%",
+                level: "55%",
             },
             {
                 skillName: "Docker",
-                level: "80%",
+                level: "35%",
             },
             {
                 skillName: "NodeJS",
-                level: "80%",
+                level: "43%",
             },
             
         ]
@@ -55,7 +55,7 @@ export const skillsData = [
             },
             {
                 skillName: "MongoDB",
-                level: "60%",
+                level: "45%",
             },
           
             
