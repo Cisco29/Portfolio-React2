@@ -26,7 +26,8 @@ const Home = () => {
       end={{ transform: "translateX(0px)" }}>
 
         <div className="home__contact-me">
-          <button onClick={handleNavigateToContactMePage}>Hire Me</button>
+          <button onClick={handleNavigateToContactMePage} style={{ marginRight: "30px" }}>Hire Me</button>
+          <a href="../../../cv.pdf" download><button >Download Resume</button></a>
         </div>
       </Animate>
     </section>

@@ -51,5 +51,12 @@ export const data = {
             startDate: "2011-04",
             endDate: "2021-06"
         },
+        {
+            title: "Bacalaureat S.E.S",
+            subTitle: "Aulnay, Fr",
+            description: "Obtention du  Baccalauréat de Science Economique et sociale, dans le lycee Jean Zay à Aulnay sous Bois",
+            startDate: "1999-06",
+            endDate: "1999-07"
+        },
     ]
 };

@@ -15,13 +15,13 @@ const portfolioData = [
     id: 2,
     name: "Projet Flovia",
     image: ImageOne,
-    link: "../../../public/assets/video/floviaVideo.mp4",
+    link: "https://github.com/anthoMag/deviadux_projet",
   },
   {
     id: 2,
     name: "Projet Plume",
     image: ImageTwo,
-    link: "../../../public/assets/video/plumeVideo.mp4",
+    link: "https://github.com/MicroTarion/ProjetPlumes",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ const portfolioData = [
     id: 3,
     name: "Slider eyes",
     image: ImageFour,
-    link: "",
+    link: "https://github.com/Cisco29/SliderEyes",
   },
   {
     id: 3,
@@ -45,7 +45,7 @@ const portfolioData = [
     id: 3,
     name: "Login Form transparent",
     image: ImageSix,
-    link: "",
+    link: "https://github.com/Cisco29/LoginFormTransparent",
   },
 ];
 
