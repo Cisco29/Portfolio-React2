@@ -7,6 +7,7 @@ import ImageThree from "../../images/iddeos.png";
 import ImageFour from "../../images/slide.png";
 import ImageFive from "../../images/portfolio.png";
 import ImageSix from "../../images/loginFormTransparent.png";
+import ImageSeven from "../../images/akiraSliders.png";
 import "./styles.scss";
 import { useState } from "react";
 
@@ -15,19 +16,19 @@ const portfolioData = [
     id: 2,
     name: "Projet Flovia",
     image: ImageOne,
-    link: "https://github.com/anthoMag/deviadux_projet",
+    link: "https://www.youtube.com/watch?v=Xf0VVZC0dDk&t=16s",
   },
   {
     id: 2,
     name: "Projet Plume",
     image: ImageTwo,
-    link: "https://github.com/MicroTarion/ProjetPlumes",
+    link: "https://www.youtube.com/watch?v=pe4AIBEjBXg&t=1s",
   },
   {
     id: 2,
     name: "Projet Inventor Manager",
     image: ImageThree,
-    link: "../../../public/assets/video/iddeosVideo.mp4",
+    link: "https://www.youtube.com/watch?v=4-fz49MsHKk&t=4s",
   },
   {
     id: 3,
@@ -46,6 +47,12 @@ const portfolioData = [
     name: "Login Form transparent",
     image: ImageSix,
     link: "https://github.com/Cisco29/LoginFormTransparent",
+  },
+  {
+    id: 3,
+    name: "Hommage à Akira Toriyama",
+    image: ImageSeven,
+    link: "https://www.youtube.com/watch?v=dsvPbQsioRk",
   },
 ];
 
