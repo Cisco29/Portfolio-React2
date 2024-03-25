@@ -8,6 +8,7 @@ import ImageFour from "../../images/slide.png";
 import ImageFive from "../../images/portfolio.png";
 import ImageSix from "../../images/loginFormTransparent.png";
 import ImageSeven from "../../images/akiraSliders.png";
+import ImageEight from "../../images/SliderCeser.png";
 import "./styles.scss";
 import { useState } from "react";
 
@@ -53,6 +54,12 @@ const portfolioData = [
     name: "Hommage à Akira Toriyama",
     image: ImageSeven,
     link: "https://www.youtube.com/watch?v=dsvPbQsioRk",
+  },
+  {
+    id: 2,
+    name: "Hommage à Ceser87",
+    image: ImageEight,
+    link: "https://www.youtube.com/watch?v=OrA0yH2iUVI",
   },
 ];
 
