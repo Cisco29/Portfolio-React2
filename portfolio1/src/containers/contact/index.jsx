@@ -120,11 +120,11 @@ const Contact = () => {
                   {/* Div pour les icônes de médias sociaux */}
                   <div className="socialLinks">
                     {/* Lien vers GitHub avec icône */}
-                    <a href="https://github.com/Cisco29">
+                    <a href="https://github.com/Cisco29" className="SocialIcon">
                       <FaGithub className="yellow" size={20} />
                     </a>
                     {/* Lien vers LinkedIn avec icône */}
-                    <a href="https://www.linkedin.com/in/francisco-castro-47a8a1260/">
+                    <a href="https://www.linkedin.com/in/francisco-castro-47a8a1260/" className="socialIcon">
                       <FaLinkedin className="yellow" size={20} />
                     </a>
                   </div>
